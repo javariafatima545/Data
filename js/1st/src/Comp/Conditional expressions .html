@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <p id="dem"></p>
+    <script>
+      // <!-- data types  -->
+      // <!--  number  undefine  string null
+      //  parsenint number ko string pay convert krta ha -->
+      // let a = prompt("hey your agg?");
+      // a = Number.parseInt(a);
+      // console.log(typeof a);
+
+      // if (a < 0) {
+      //   alert("you are a kid");
+      // } else if (a < 9) {
+      //   alert(" y are not a kid");
+      // } else if (a < 18 && a >= 6) {
+      //   alert("you are a kid and y will this");
+      // } else {
+      //   alert("you  can now drive  as y are abou 18");
+      // }
+      // console.log("done");
+
+
+
+      //    ternary operator
+      // console.log("y can "(a>18? "not drive":"drive"))
+
+
+
+  let carname1="vocol 123";
+  let carname2="audi 1122";
+  document.getElementById("dem").innerHTML=carname1 +"<br>"+carname2
+
+
+
+let x=5;
+let y=5;
+let z=6;
+console.log((x==y)+""+ (y==z))
+// problem 1
+
+
+// let age=prompt("what is your age ")
+// if (age>10 && age<30){
+//   console.log("your age is 10 between 30")
+// }
+//  else {
+//   console.log ("y age is not 10 0r 30")
+
+//  }
+//  problem 2
+let age=prompt("what is your age")
+switch (age) {
+  case"12":
+  console.log("y age 12")
+  break;
+  case"13":
+  console.log("y age 13")
+  break;
+  case"13":
+  console.log("y age 13")
+  break;
+  default :
+  console.log("y agre is not match")
+}
+
+// problem 3
+let  ag = prompt ("what is  your age")
+num= Number.parseInt(ag)
+if (num%2 ==0 && num %3==0){
+  console.log("y num is divisible by 2 and 3")
+}
+else {
+   console.log("y num is not devided  by 2 or 3")
+}
+
+// problem 4
+let  agq = prompt ("what is  your age")
+num1= Number.parseInt(agq)
+if (num%2 ==0 || num %3==0){
+  console.log("your num is divisible by 2 and 3")
+  
+}
+else {
+   console.log("y num is not devided  by 2 or 3")
+}
+
+// problem 5 
+// use   ternary operator 
+let agee =12
+let aa = agee>18? "y can drive":"y cant  drive";
+console.log(aa)
+
+
+
+
+
+
+
+
+      // const expr = "Papayas";
+      // switch (expr) {
+      //   case "Oranges":
+      //     console.log("Oranges are $0.59 a pound.");
+      //     break;
+      //   case "Mangoes":
+      //   case "Papayas":
+      //     console.log("Mangoes and papayas are $2.79 a pound.");
+      //     // expected output: "Mangoes and papayas are $2.79 a pound."
+      //     break;
+      //   default:
+      //     console.log(`Sorry, we are out of ${expr}.`);
+      // }
+
+
+     
+    </script>
+  </body>
+</html>

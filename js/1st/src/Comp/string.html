@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <p id="demo">Hello World</p>
+  <p id="demo1"></p>
+  <body>
+    <script>
+      // Extracting String Parts
+      // slice
+      // substring
+      // substr
+      //   slice(start, end)
+      // substring(start, end)
+      // substr(start, length)
+
+      let str = "Apple, Banana, Kiwi";
+      console.log(str.slice(7, 13));
+      let st = "Apple, Banana1, Kiwi";
+      console.log(st.substring(7, 14));
+      //   substr ma  secnd parameter lenghth  define krta ha 1st jo ha vp start  value lata ha
+      let s = "Apple, Banan222, Kiwi";
+      console.log(s.substr(7, 6));
+      //   replace
+      //  replace() method is case sensitive. Writing MICROSOFT (with upper-case) will not work:
+      // To replace case insensitive, use a regular expression with an /i flag (insensitive):
+      // To replace case insensitive, use a regular expression with a /g flag (global match)::
+      let ss = "Apple abc,  babas";
+      let v = ss.replace("Apple abc", "baba xyz");
+      console.log(v);
+
+      let a = " apple";
+      let b = a.replace(/APPLE/i, "W3Schools");
+
+      console.log(b);
+
+      let c = " apple";
+      let d = c.replace(/apple/g, "W3Schools11");
+      console.log(d);
+
+      //   upper case
+      //   lowercase
+      function myFunction() {
+        let text = document.getElementById("demo").innerHTML;
+        document.getElementById("demo").innerHTML = text.toUpperCase();
+      }
+      //   srting  method in concact
+      let e = "text1";
+      let f = " text2";
+      let g = e.concat(f);
+      console.log(g);
+      //  The trim() method removes whitespace from both sides of a string:
+      // trim  start or  trim end
+      let i = "     qqqq       ";
+      console.log(i.trimEnd());
+      //
+      let j = "  kkkkkk        ";
+      console.log(j.trimStart());
+      //
+      //   string padding  start or end
+      // kithna char  aya ga     mtlb length or sath ma ky print krva na ha
+      //
+      let k = "qw";
+      let l = k.padStart(5, "ji");
+      console.log(l);
+      let m = "abc";
+      let n = m.padEnd(4, "ix");
+      console.log(n);
+
+      //   exerting  string char
+      const o = "XYZ";
+      const p = o.charCodeAt(0);
+      console.log(p);
+
+      //   Converting a String to an Array
+      //   split metod string lo array ma convert krta ha
+      const q = "HELLO";
+      const r = q.split("");
+      console.log(r);
+      //  document.getElementById("demo1").innerHTML= r;
+      
+    </script>
+  </body>
+</html>

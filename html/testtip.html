@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .back {
+      background-color: indianred;
+      width: 30%;
+      text-align: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+    }
+  </style>
+
+  <body>
+    <div class="back">
+      <table>
+        <p>Bill amount</p>
+
+        <input type="text" length="12" id="amount" onchange="" value="" />
+        <p>total services</p>
+        <select id="services">
+          <option selected disabled hidden>Select</option>
+          <option value="0.10">10%</option>
+          <option value="0.15">15%</option>
+          <option value="0.20">20%</option>
+        </select>
+      </table>
+
+      <input
+        type="text"
+        id="persons"
+        placeholder="Number of people sharing the bill"
+      />
+      <button id="calculate">Calculate</button>
+      <div class="tip">
+        <p>tip amount</p>
+        <span id="total">0</span>$
+        <span id="each">each </span>
+      </div>
+    </div>
+
+    <script>
+      // Get  duplicate number from an array using for loop.
+      var arr = [5, 2, 33, 5, 6, 62, 6, 5];
+
+      for (let i = 0; i < arr.length; i++) {
+        for (let j = 1 + i; j < arr.length; j++) {
+          if (arr[i] == arr[j]) {
+            console.log(arr[j]);
+          }
+        }
+      }
+      //   find the power of number using for loop.16,5
+      function pow(n, e) {
+        let num = n;
+        for (let i = 1; i < e; i++) {
+          num *= n;
+        }
+        return num;
+      }
+      console.log(pow(16, 5));
+      //   Tip calculator. Created two input areas.1. In the first input box to input the bill amount in.
+      // 2 the second input box to input the information of how many people will give this tip.
+      // 3. add three buttons 10% 15% 20%
+      // click one of them and calculate the tip.
+      window.onchange = () => {
+        document.querySelector("#calculate").onclick = calculateTip;
+      };
+
+      function calculateTip() {
+        // let  amount = document.querySelector('#amount').value;
+        let amount = document.querySelector("#amount").value;
+        let persons = document.querySelector("#persons").value;
+        let service = document.querySelector("#services").value;
+
+        let total = (amount * service) / persons;
+        total = total.toFixed(2);
+
+        document.querySelector(".tip").style.display = "block";
+        document.querySelector("#total").innerHTML = total;
+      }
+
+
+
+
+      // window.onchange = () => {
+      //   document.querySelector("#calculate").onchange = calculateTip;
+      // };
+
+      // function calculateTip() {
+      //   let amount = document.querySelector("#amount").value;
+      //   let person = document.querySelector("#person").value;
+      //   let service = document.queryCommandValue("#service").value;
+
+      //   let total = (total * service) / person;
+      //   total = total.toFixed(2);
+      //   let tip = (document.querySelector(".tip").style.display = "block");
+      //   document.querySelector("#total").innerHTML = total;
+      // }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="displaydate()">date</button>
+    <p id="id"></p>
+    <p id="" ondblclick="dubleclick()">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus dolores
+      tenetur asperiores possimus, officia eaque eveniet eos blanditiis cum
+      libero omnis sapiente consectetur incidunt perspiciatis unde, expedita
+      placeat. Blanditiis, sed?
+    </p>
+    <p id="idd"></p>
+  </body>
+  <script>
+    function displaydate() {
+      document.getElementById("id").innerHTML = Date();
+    }
+    function dubleclick() {
+      document.getElementById("idd").innerHTML = "hello world !";
+    }
+  </script>
+</html>

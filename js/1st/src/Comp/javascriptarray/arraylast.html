@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Finding matches between more than 2 JavaScript arrays</title>
+  </head>
+
+  <body>
+    <p id="gfg"></p>
+    <script>
+      let last = document.getElementById("gfg");
+      const arr1 = [1, 3, 5, 7, 9];
+      const arr2 = [1, 2, 4, 5, 7];
+      const arr3 = [1, 2, 5, 7, 8];
+      const arr = [arr1, arr2, arr3];
+
+      function unique() {
+        arr0 = arr.slice();
+        last.innerHTML = arr0.shift().filter(function (v) {
+          return arr0.every(function (a) {
+            return a.indexOf(v) !== -1;
+          });
+        });
+      }
+      unique();
+
+      let array_Clone = function (arra1) {
+        return arra1.slice(0);
+      };
+
+      console.log(array_Clone([1, 2, 4, 0]));
+      console.log(array_Clone([1, 2, [4, 0]]));
+
+      var is_array = function (input) {
+        if (toString.call(input) === "[object Array]") {
+          return true;
+        }
+
+        return false;
+      };
+      console.log(is_array("w3resource"));
+      console.log(is_array([1, 2, 4, 0]));
+
+      const str = ["green", "blue", "red", " orange"];
+      const st = str.toString();
+      const s = str.join(" + ");
+      console.log(s);
+      console.log(st);
+
+
+
+      
+      const num = window.prompt();
+      const strr = num.toString();
+      const result = [str[0]];
+
+      for (let x = 1; x < str.length; x++) {
+        if (strr[x - 1] % 2 === 0 && strr[x] % 2 === 0) {
+          result.push("-", strr[x]);
+        } else {
+          result.push(strr[x]);
+        }
+      }
+      console.log(result.join(""));
+
+     
+   
+         const pointss = [40, 100, 1, 5, 25, 10];
+      const po = pointss.sort(myFunction1);
+      function myFunction1(a, b) {
+        return a - b;
+      }
+      console.log(po)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      .background {
+        background-image: url("/imges/photographer.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        width: 100%;
+        vertical-align: middle;
+        /* height: 100vh; */
+      }
+      .jane {
+        font-family: "Segoe UI", Arial, sans-serif;
+        color: white;
+        font-size: 70px;
+        font-weight: 100px;
+        letter-spacing: 1.2px;
+      }
+      .photo {
+        font-family: "Segoe UI", Arial, sans-serif;
+        color: white;
+        font-size: 25px;
+        letter-spacing: 4.9px;
+      }
+      .cen {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .boo {
+        /* border: 1px solid gray;
+        width: 40%;
+        margin: auto; */
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+      }
+      .bo {
+        border: 1px solid gray;
+        width: 40%;
+        margin: auto;
+      }
+      .gray {
+        background-color: lightgray;
+        color: white;
+      }
+      .cente {
+        text-align: center;
+        margin-top: -10px;
+      }
+      .gray:hover {
+        background-color: gray !important ;
+        color: white !important;
+      }
+      .back {
+        background-color: lightgray;
+      }
+      .width {
+        width: 91%;
+        margin-top: 10px;
+      }
+      .contact {
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-weight: 400;
+        margin: 10px 0;
+        font-size: 50px;
+      }
+      .form-control {
+        border-radius: 0px;
+      }
+      .back-btn {
+        background-color: #616161 !important;
+        color: white;
+      }
+      .btn {
+        border-radius: 0px;
+      }
+      @media only screen and (max-width: 768px) {
+        .cente {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="col-sm-12 col-md-12 col-lg-12"> -->
+    <div class="background col-sm-12 col-md-6">
+      <div class="boo">
+        <div class="bo">
+          <div class="jane cen">JANE DOE</div>
+          <div class="photo cen">PHOTOGRAPHER</div>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+
+    <!-- button  -->
+    <div class="cente">
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <a href="#"> <button type="button" class="btn gray">Home</button></a>
+     <a target="_blank"  href="http://127.0.0.1:5501/port.html#"> <button type="button"onclick =" " class="btn gray">Portfolio</button></a>
+       <a href="#contact"><button type="button" class="btn gray" onclick="">Contact</button></a>
+      </div>
+    </div>
+    <!-- imges -->
+    <!-- <div class="container" id="port">
+      <div class="text-center mt-3">
+        <img src="./imges/ocean2.jpg" alt="" width="100%" />
+      </div>
+      <div class="text-center mt-3">
+        <img src="./imges/mountains2.jpg" alt="" width="100%" />
+      </div>
+      <div class="text-center mt-3">
+        <img src="./imges/mountainskies.jpg" alt="" width="100%" />
+      </div>
+      <div class="text-center mt-3">
+        <img src="./imges/ocean.jpg" alt="" width="100%" />
+      </div>
+      <div class="text-center mt-3">
+        <img src="./imges/falls2.jpg" alt="" width="100%" />
+      </div>
+    </div> -->
+    <!-- Contact -->
+    <div class="container back width py-2" id ="contact">
+      <div class="text-center py-3 contact">Contact</div>
+      <div class="py-3">
+        Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed
+        mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac
+        accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam
+        corper. Praesent tincidunt sed tellus.
+      </div>
+      <div class="input">
+        <div>Name</div>
+        <!-- <span class="input-group-text" id="addon-wrapping">@</span> -->
+        <input
+          type="text"
+          class="form-control"
+          placeholder=""
+          aria-label="Username"
+          aria-describedby="addon-wrapping"
+        />
+      </div>
+      <div class="input">
+        <div>Email</div>
+        <!-- <span class="input-group-text" id="addon-wrapping">@</span> -->
+        <input
+          type="email"
+          class="form-control"
+          id="floatingInput"
+          placeholder=""
+        />
+      </div>
+      <div class="input">
+        <div>Message</div>
+        <!-- <span class="input-group-text" id="addon-wrapping">@</span> -->
+        <input
+          type="text"
+          class="form-control"
+          placeholder=""
+          aria-label="Username"
+          aria-describedby="addon-wrapping"
+        />
+      </div>
+      <div class="d-grid gap-2 my-2 mb-1">
+        <button class="btn back-btn" type="button">Send</button>
+      </div>
+    </div>
+  </body>
+  <!-- JavaScript Bundle with Popper -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"
+  ></script>
+</html>

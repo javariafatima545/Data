@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <input type="text" onblur="onblur()" name="" id=""> -->
+  </head>
+  <body>
+    <input type="text" onblur="onBlur()" name="" id="dm" />
+    <!-- <input type="text" id="fname" onchange="upperCase()"> -->
+    <input type="text" name="" id="" onfocus="onChange(this)" />
+    <input type="text" name="" id="" value="helloworld" onselect="onSelect()" />
+    <p id="do"></p>
+    <form action="https://www.w3schools.com/js/default.asp" onsubmit="sumbit()">
+      <input id="fname" type="text" size="20" />
+      <input type="submit" />
+    </form>
+    <form onreset="mesg()">
+      <input type="text" name="" id="" />
+      <input type="reset" />
+    </form>
+    <input type="text" onkeydown="keydown()" />
+    <input type="text" name="" onkeypress="keypress()" id="" />
+    <input type="text" name="" onkeyup="keyup()" id="name" />
+    <form>
+      <input type="text" name="myInput" onkeyup="Message()" size="20"/>
+      <input type="text" name="mySecondInput" size="20"/>
+    </form>
+
+    <script>
+      function onBlur() {
+        let x = document.getElementById("dm");
+        x.value = x.value.toUpperCase();
+      }
+      function onChange(x) {
+        x.style.background = "green";
+      }
+      function onSelect() {
+        document.getElementById("do").innerHTML = "y are the champion";
+      }
+      function sumbit() {
+        fname = document.forms[0].fname.value;
+      }
+      function mesg() {
+        alert("y input feild is reset");
+      }
+
+      function keydown() {
+        alert("y enter a value");
+      }
+      function keypress() {
+        alert("y have  press the key");
+      }
+      function keyup() {
+        let x = document.getElementById("name");
+        x.value = x.value.toUpperCase();
+      }
+      function Message() {
+        document.forms[0].mySecondInput.value = document.forms[0].myInput.value;
+      }
+    </script>
+  </body>
+</html>

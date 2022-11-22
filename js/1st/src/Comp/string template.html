@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="a"></p>
+    <script>
+      let text = `hello`;
+      document.getElementById("a").innerHTML = text;
+      // Quotes Inside Strings
+      // Template literals allows multiline strings:
+      let a = ` hello "world"`;
+      console.log(a);
+      let b = ` usjnjsxnsx
+  jsckscnkscnkc
+  ddfdf
+  sssssss`;
+      console.log(b);
+      //    string ma  varibale y koi value likhani ho t  hum ${ } k sath likh t ha
+      // Variable Substitutions
+
+      let firstName = "zoha";
+      let lastName = " fatima";
+      let c = ` hello ${firstName},${lastName} in this world`;
+      console.log(c);
+      //   Expression Substitution
+      let price = 10;
+      let vat = 0.23;
+      let d = ` total: ${price * (1 + vat).toFixed(2)}`;
+      let e= `   total :${price*(44+vat).toFixed(3)}`;
+      console.log(d);
+      console.log(e);
+     obj ={aa:"10",aa:"10",aa:"10",aa:"10"}
+     console.table(obj)
+     window.alert(hy)
+
+     alert("enter  the value a")
+     let aa= prompt ( "enter a here");
+     document.write(a)
+    </script>
+  </body>
+</html>

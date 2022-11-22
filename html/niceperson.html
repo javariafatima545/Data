@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <table>
+    <tr>
+      <td>n1</td>
+      <td><input type="text" length="5" id="n1" /></td>
+    </tr>
+    <tr>
+      <td>op</td>
+      <td><input type="text" maxlength="1" id="op" /></td>
+    </tr>
+    <tr>
+      <td>n2</td>
+      <td><input type="text" length="5" id="n2" /></td>
+    </tr>
+  </table>
+  <button onclick="cal()">cal</button>
+  <table>
+    <tr>
+      <td>result</td>
+      <td><input type="text" length="5" id="result" /></td>
+    </tr>
+  </table>
+  <body>
+    <script>
+      // Get miles from the user in the prompt box and display kilometers  of that miles in the alert box.
+      const kilometer = prompt("Enter a number a");
+      const fact = 4;
+      const mile = fact * kilometer;
+      console.log(mile);
+
+      //         creates a variable name of exact_number and assigns any number to it.
+      //   Get a random number from the user and compare that number with the exact number variable
+      //    If the number is equal to the exact number then show a message your number is. if the number is greater than the exact number show a message your number is greater than the exact number
+      //  else show a message your number is less than the exact number.
+
+      let aa = 5;
+
+      if (aa >= 20) {
+        console.log("y value is right ");
+      } else if (aa >= 10) {
+        console.log("y value is not right ");
+      } else {
+        console.log("sooory");
+      }
+
+      //       Get user age in number from the user if age exceeds 17 and allow else deny.
+      // and show a message you are not allowed to access.
+
+      let bb = 20;
+      if (bb >= 17) {
+        console.log("y are allow");
+      } else {
+        console.log("deny");
+      }
+
+      //        Create a basic calculator.
+      // one number, a second operator, and
+      // the third number  shows the result.
+      function cal() {
+        var n1 = parseInt(document.getElementById("n1").value);
+        var n2 = parseInt(document.getElementById("n2").value);
+        var op = document.getElementById("op").value;
+        if (op == "+") {
+          document.getElementById("result").value = n1 + n2;
+        } else if (op == "-") {
+          document.getElementById("result").value = n1 - n2;
+        } else if (op == "*") {
+          document.getElementById("result").value = n1 * n2;
+        } else if (op == "/") {
+          document.getElementById("result").value = n1 / n2;
+        } else {
+          ("alert");
+        }
+      }
+
+      //   ['two', 'one', 'mango', true, 35, null, undefined];
+      // get a copy of index 1,2
+      let aaa = ["two", "one", "mango", true, 35, null, undefined];
+      let bbb = aaa.slice(1, 3);
+      console.log(bbb);
+
+      // ['two', 'one', 'mango', true, 35, null, undefined]
+      // replace second last with “you are nice person”
+      let xx = ["two", "one", "mango", true, 35, null, undefined];
+      console.log(xx);
+      xx[5] = "you are nice person";
+      console.log(xx);
+    
+    </script>
+  </body>
+</html>

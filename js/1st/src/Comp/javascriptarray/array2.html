@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+        // problem 8
+
+      const array = [1, 2, 3, 4, 5, 6, 7];
+      const size = array.length;
+      const chunk = (array, size) => {
+        const chunkedArr = [];
+        for (let i = 0; i < size; i += 2) {
+          chunkedArr.push(array.slice(i, i + 2));
+        }
+        return chunkedArr;
+      };
+      console.log(chunk(array, size));
+
+    //    problem 9 
+    
+    </script>
+  </body>
+</html>

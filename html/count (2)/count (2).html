@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-group">
+            <div class="form-control col-sm-12">
+                <div class="col-sm-6">
+                    <input id="input" type="text" class="form-control" disabled>
+                </div>
+                <div class="col-sm-2 mt-4">
+                    <button type="button" id="but" class="form-control btn btn-primary">
+                        Type Here....
+                    </button>
+                </div>
+                <div class="d-flex">
+                    <div class="mt-5">
+                        <span id="wordCount" clas="text-align-center">0 word per minute</span>
+                    </div>
+                    <div>
+                        <span id="timer">60 Seconds remaining</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
+<script src="jquery.min.js"></script>
+
+<script>
+    $('#but').on('click', function () {
+        $('#input').attr('disabled', false);
+        setInterval(() => {
+            time = parseInt($('#timer').text());
+            time == 0 ? $('#timer').html('Time is Up') : value = time - 1;
+            $('#timer').html(value + ' Seconds Remaining');
+        }, 1000);
+
+    });
+
+    $('#input').on('input', function () { 
+        console.log(document.getElementById('input'));
+        $('#but').attr('disabled', true);
+
+    });
+    setTimeout(() => {
+        $('#input').attr('disabled', true);
+        checkCounter();
+    }, 61000);
+
+    function checkCounter() {
+        text = $('#input').val();
+        words = text.split(' ');
+        totalWords = 0;
+        for (let items of words) {
+            totalWords += 1;
+        }
+        $('#wordCount').text(parseInt(totalWords) + 'Words per Minute');
+    }
+</script>

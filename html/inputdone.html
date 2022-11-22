@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="myInput" onchange="" oninput="" />
+
+    <script>
+      let start = 0;
+      let end = 0;
+      let typingTimer; //timer identifier
+      let doneTypingInterval = 1000; //time in ms (5 seconds)
+      let myInput = document.getElementById("myInput");
+
+      //on keyup, start the countdown
+      myInput.addEventListener("keyup", () => {
+        clearTimeout(typingTimer);
+        if (myInput.value) {
+          typingTimer = setTimeout(doneTyping, doneTypingInterval);
+        }
+        console.log(myInput.value);
+        const today = new Date();
+        start =
+          today.getHours() +
+          ":" +
+          today.getMinutes() +
+          ":" +
+          today.getSeconds();
+        console.log(start);
+      });
+
+      //user is "finished typing," do something
+      function doneTyping() {
+        words = myInput.value.split("").length;
+        console.log(words)
+        const today = new Date();
+
+        end =
+          today.getHours() +
+          ":" +
+          today.getMinutes() +
+          ":" +
+          today.getSeconds();
+        console.log(end);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,170 @@
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<h1>
+   <span id="word-1">man</span> <span id="word-2">become</span> <span id="word-3">as</span>
+   <span id="word-4">and</span> <span id="word-5">through</span> <span id="word-6">find</span> <span id="word-7">would</span> <span id="word-8">here</span> <span id="word-9">and</span> <span id="word-10">before</span>
+</h1>
+
+<input type="text" id="boch">
+
+        </div>
+        <div id="typing-area">
+
+      <button id="bocho" onclick="document.getElementById('boch').value = ''">Enter</button>
+<script>var input = document.getElementById("boch");
+    input.addEventListener("keyup", function (event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("bocho").click();
+      }
+    });
+    
+    
+    var element = document.querySelector("#boch");
+    
+    element.onkeyup = function () {
+      var value = element.value;
+    
+      if (value.includes("man")) {
+        document.getElementById('word-1').style.backgroundColor = 'green';
+      } else {
+        document.getElementById('word-1').style.backgroundColor = 'transparent';
+      }
+    
+      if (value.includes("man become")) {
+        document.getElementById('word-2').style.backgroundColor = 'green';
+      } else {
+        document.getElementById('word-2').style.backgroundColor = 'transparent';
+      }
+    
+      if (value.includes("man become as")) {
+        document.getElementById('word-3').style.backgroundColor = 'green';
+      } else {
+        document.getElementById('word-3').style.backgroundColor = 'transparent';
+      }
+    
+      if (value.includes("man become as and")) {
+        document.getElementById('word-4').style.backgroundColor = 'green';
+      } else {
+        document.getElementById('word-4').style.backgroundColor = 'transparent';
+      }
+    
+      if (value.includes("man become as and through")) {
+        document.getElementById('word-5').style.backgroundColor = 'green';
+      } else {
+        document.getElementById('word-5').style.backgroundColor = 'transparent';
+      }
+    
+      if (value.includes("man become as and through find")) {
+        document.getElementById('word-6').style.backgroundColor = 'green';
+      } else {
+        document.getElementById('word-6').style.backgroundColor = 'transparent';
+      }
+    
+      if (value.includes("man become as and through find would")) {
+        document.getElementById('word-7').style.backgroundColor = 'green';
+      } else {
+        document.getElementById('word-7').style.backgroundColor = 'transparent';
+      }
+    
+      if (value.includes("man become as and through find would here")) {
+        document.getElementById('word-8').style.backgroundColor = 'green';
+      } else {
+        document.getElementById('word-8').style.backgroundColor = 'transparent';
+      }
+    
+      if (value.includes("man become as and through find would here and")) {
+        document.getElementById('word-9').style.backgroundColor = 'green';
+      } else {
+        document.getElementById('word-9').style.backgroundColor = 'transparent';
+      }
+    
+      if (value.includes("man become as and through find would here and before")) {
+        document.getElementById('word-10').style.backgroundColor = 'green';
+      } else {
+        document.getElementById('word-10').style.backgroundColor = 'transparent';
+      }
+    
+     
+    
+    }
+    let tagArr = document.getElementsByTagName("input");
+    for (let i = 0; i < tagArr.length; i++) {
+      tagArr[i].autocomplete = 'off';
+    }</script>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+</body>
+
+<script>
+    const string = "man become as and through find would here and before";
+
+var text = document.getElementById("text");
+var input = document.getElementById("input");
+
+var start = null;
+var finished = false;
+
+// Split the string to an array of words
+var words = string.split(" ");
+
+text.innerHTML = "";
+// For each word, add it as a span element in the text
+words.forEach(w => {
+    let el = document.createElement("span");
+    el.innerText = w;
+    text.appendChild(el);
+    text.innerHTML += " ";
+});
+    input.addEventListener("keyup", () => {
+        // Split the input to an array of words
+        let input_words = input.value.split(" ");
+        let good = true;
+    
+        if (finished)
+            return;
+        if (!start)
+            start = Date.now();
+    
+        // Iterate over all the words
+        for (let i = 0; i < words.length; i++) {
+            let element = words[i];
+            // If the word is not the same as the word at same position in the input, set 'good' at false
+            if (input_words[i] != element)
+                good = false;
+            // Set the background color for the word, selecting the element
+            // by the parent's children index (corresponding to i) to avoid the usage of ids
+            text.children[i].style.backgroundColor = good ? "green" : null;
+        }
+        // If all words are correct, the variable is still true
+        if (good)
+        {
+            finished = true;
+            // Get the difference in seonds between start and now
+            let elapsed = (Date.now() - start) / 1000;
+            // Get words per seconde
+            let words_per_seconde = words.length * 60 / elapsed;
+            // Round to the fourth decimal
+            words_per_seconde = Math.round(words_per_seconde * 1000) / 1000;
+            alert(words_per_seconde + " words per minute.");
+        }
+    });
+        </script>
+</html>

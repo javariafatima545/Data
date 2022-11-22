@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      for (i = 1; i <= 10; i++) {
+        console.log(i);
+      }
+      let list = [4, 5, 6];
+
+      // in jo ha index bata re ha
+      for (let i in list) {
+        console.log(i);
+      }
+
+      // for off jo h  vo value data ha
+
+      for (let i of list) {
+        console.log(i);
+      }
+
+      for (i = 1; i <= 10; ++i) {
+        console.log(i);
+      }
+      let listt = {
+        alii: "1888882",
+        ali: "12",
+        alai: "12",
+      };
+      for (let i in listt) {
+        console.log(i);
+      }
+
+
+
+
+
+      // for of 
+
+      data = [
+        {
+          alii: "1888882",
+          ali: "12",
+          alai: "12",
+        },
+      ];
+      for (const n of data) {
+        console.log(n.ali);
+      }
+
+      //     for (const [key, value] of items) {
+      // console.log(value);
+      // }
+    </script>
+  </body>
+</html>

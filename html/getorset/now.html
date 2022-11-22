@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <p id="id"></p>
+  <body>
+    <script>
+      //   let s = Date.now();
+      //   document.getElementById("demo").innerHTML = s;
+      //
+      let m = 60 * 1000;
+      let h = m * 60;
+      let d = h * 24;
+      let y = d * 365;
+      let de = Date.parse("March 21, 2022");
+      let yy = Math.round(de / y);
+      document.getElementById("id").innerHTML = yy;
+
+      // set  date
+      const date = new Date("July 21, 1983 01:15:00");
+      date.setDate(4);
+      console.log(date);
+      //   Set the date to six months ago:
+
+      const dd = new Date();
+      dd.setFullYear(dd.getFullYear(), dd.getMonth() - 6);
+      console.log(dd);
+
+      const ta = new Date();
+      ta.setFullYear(ta.getFullYear(), ta.getMonth() - 4);
+      console.log(ta);
+   
+
+      //   set  hours is ma hum  3  value da saktha ha   mint sec or time
+      const q = new Date();
+      q.setHours(12, 04, 09);
+      console.log(q);
+
+      // 
+      let  ja = new Date (); 
+      ja.setFullYear(ja.getFullYear(), ja.getMonth() -2);
+      console.log( ja)
+
+       
+    </script>
+  </body>
+</html>

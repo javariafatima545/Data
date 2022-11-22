@@ -1,0 +1,65 @@
+<html>
+  <head> </head>
+<style>
+    .background{
+         background-color: cadetblue;
+         width: 30%;
+         text-align: center;
+    }
+</style>
+  <body>
+    <div class="container background">
+      <h1>TIP CALCULATOR</h1>
+      <div class="wrapper">
+        <p>Bill Amount</p>
+
+        <input type="text" id="amount" placeholder="Amount to be paid" /> $
+
+        <p>How was the service ?</p>
+
+        <select id="services">
+          <option selected disabled hidden>Select</option>
+         
+          <option value="0.20">20% - Excellent</option>
+          <option value="0.15">15% - Good</option>
+          <option value="0.10">10% - Bad</option>
+          
+        </select>
+
+        <p>Total number of persons</p>
+
+        <input  type="text" id="persons"placeholder="Number of people sharing the bill"/>
+        <button id="calculate">Calculate</button>
+      </div>
+
+      <div class="tip">
+        <p>Tip Amount</p>
+
+        <span id="total">0</span>$
+        <span id="each">each</span>
+      </div>
+    </div>
+    <script>
+window.onload = () => {
+        document.querySelector('#calculate').onclick = calculateTip;
+    }
+ 
+function calculateTip() {
+  
+    let amount = document.querySelector('#amount').value;
+    let persons = document.querySelector('#persons').value;
+    let service = document.querySelector('#services').value;
+ 
+    console.log(service);
+   
+    let total = (amount * service) / persons;
+    total = total.toFixed(2);
+ 
+   
+    document.querySelector('.tip').style.display = 'block';
+    document.querySelector('#total').innerHTML = total;
+}
+ 
+    </script>
+  </body>
+</html>

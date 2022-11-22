@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  
+   
+
+</body>
+ <button  onclick="play()">play </button>
+ <audio id="one" src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"></audio>
+
+ <button onclick="hello()"> play 2</button>
+ 
+  <audio id ="two"   src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3" type="audio/ogg"></audio>
+ <audio id = "three"  src="./imges/cock.mp3"></audio>
+ <button onclick="world()" > play 3</button>
+   <script>
+    //   function hello() {
+
+        function play() {
+        let a = document.getElementById("one");
+        
+        
+        a.play();
+     
+      }
+      function hello(){
+        let b = document.getElementById("two");
+        b.play();
+       }
+       function world(){
+        let c = document.getElementById("three");
+         c.play();
+
+       }
+
+
+      
+   </script>
+  </body>
+</html>

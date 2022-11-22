@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <p id="demoo"></p>
+    <p id="dm"></p>
+    <p id="dmo"></p>
+    <p id="dmm"></p>
+    <p id=" aaa"></p>
+    <p id=" abc"></p>
+    <p id="xyz"></p>
+    <p id="mn"></p>
+    <p id="12"></p>
+    <script>
+      var x = myFunction(4, 3);
+      document.getElementById("demo").innerHTML = x;
+
+      function myFunction(a, b) {
+        return a * b;
+      }
+
+      let y = myFun(3, 5);
+      document.getElementById("dm").innerHTML = y;
+
+      function myFun(a, b) {
+        return a * b;
+      }
+
+      let z = hello(3, 5);
+      document.getElementById("dmo").innerHTML = z;
+
+      function hello(a, b) {
+        return a % b;
+      }
+
+      let zz = hy(13, 44);
+      document.getElementById("dmm").innerHTML = typeof zz + " " + zz;
+      function hy(a, b) {
+        return a / b;
+      }
+
+    //   myFunction();
+
+      function myFunctionn(a, b) {
+        document.getElementById("xyz").innerHTML = typeof +"" + (a + b);
+        return a + b;
+      }
+      myFunctionn(115, 10);
+
+      function hello(a, b) {
+        window.alert(a + b);
+        return a + b;
+      }
+      hello(100, 60);
+      hello(1000, 60);
+      hello(112, 33);
+
+      let zza = macbook(110, 22);
+      //  document.getElementById("12").innerHTML= zza;
+      console.log(zza);
+
+      function macbook(a, b) {
+        return a + b;
+      }
+
+      for (i = 1; i <= 10; i++) {
+        console.log(i);
+      }
+
+      function onePlus(x, y) {
+        return 1 + (x + y) / 2;
+      }
+      let a = 10;
+      let b = 20;
+      let c = 30;
+
+    //   console.log(a, b);
+      console.log( onePlus ( a, b));
+      console.log( onePlus ( b, c));
+      console.log(onePlus(a, c));
+
+
+      const bts=(x,y)=>{
+        return 1+ (x-y)/3;
+
+
+      }
+      let m=20;
+      let n= 30;
+      let o= 40;
+      console.log( bts ( m, n));
+      console.log( bts ( n, o));
+      console.log(bts(m, o));
+
+
+    </script>
+  </body>
+</html>

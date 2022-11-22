@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <p id="demo"></p>
+  <p id="deo"></p>
+  <p id="do"></p>
+  <p onclick = "alert('Hello world!');">nnnnnn</p>
+  <img src="./imges/cat.jpg" onClick="alert('Hello world!');">
+  <body>
+    <script>
+      function hello(a) {
+        let b = 10;
+        function world() {
+          let sum = a + b;
+          console.log(` sum of the value ${sum}`);
+        }
+        world();
+      }
+      hello(5);
+      hello(14);
+      let a = 4;
+      // hy();
+      function hy() {
+        document.getElementById("demo").innerHTML = a * a;
+      }
+      hy();
+
+      function myFunction() {
+        a = 5;
+        document.getElementById("deo").innerHTML = a * a;
+      }
+      myFunction();
+
+      //   Counting with a global variable.
+
+      // The counter is: 1
+      let counter = 0;
+      function add() {
+        let counter = 0;
+        counter += 1;
+      }
+      add();
+      add();
+      add();
+      add();
+      document.getElementById("do").innerHTML = "The counter is " + counter;
+      //   Counting with a local variable
+      let as = 0;
+      function hyy() {
+        let as = 0;
+        as = +1;
+      }
+      hy();
+      console.log(as);
+      //    Closures
+      function hu(a) {
+        let b = 11;
+        function jiya() {
+          sum = a + b;
+          console.log(sum);
+        }
+        jiya();
+      }
+      hu(2);
+      function helloe(b) {
+        let a = 10;
+        function by() {
+          sum1 = a + b;
+          console.log(sum1);
+        }
+        by();
+      }
+      helloe(22);
+      
+    </script>
+  </body>
+</html>

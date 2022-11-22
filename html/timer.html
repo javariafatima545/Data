@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .main {
+      display: flex;
+      justify-content: space-around;
+      width: 60%;
+      margin: auto;
+      background-color: black;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .back {
+      background-color: lightgrey;
+      text-align: center;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  </style>
+  <body>
+    <p id="do"></p>
+    <p id="doo"></p>
+    <div class="main">
+      <div class="back" id="days">
+        00
+        <div>days</div>
+      </div>
+      <div class="back" id="hours">
+        00
+        <div>hours</div>
+      </div>
+      <div class="back" id="mints">
+        00
+        <div>mints</div>
+      </div>
+      <div class="back" id="sec">
+        00
+        <div>second</div>
+      </div>
+    </div>
+    <div id="demo"></div>
+    <!-- <button id="minutes" onclick="setTime()">00</button>:<button id="seconds"> -->
+      <!-- 00 -->
+    <!-- </button> -->
+
+    <script>
+      const daysValue = document.querySelector("#days");
+      const hoursValue = document.querySelector("#hours");
+      const mintsValue = document.querySelector("#mints");
+      const secValue = document.querySelector("#sec");
+      const count = new Date("Oct 6, 2022 11:15:00").getTime();
+
+      let x = setInterval(function countdown() {
+        const counttime = new Date().getTime();
+        let difference = count - counttime;
+
+        const daysNumber = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hoursnumber = Math.floor((difference / (1000 * 60 * 60)) % 24);
+        const mintsnumber = Math.floor((difference / (1000 * 60)) % 60);
+        const secnumber = Math.floor((difference / 1000) % 60);
+
+        daysValue.innerHTML = daysNumber;
+        hoursValue.innerHTML = hoursnumber;
+        mintsValue.innerHTML = mintsnumber;
+        secValue.innerHTML = secnumber;
+
+        // document.getElementById("demo").innerHTML =
+        // daysNumber + "" + hoursnumber + "" + mintsnumber + "" + secnumber;
+        if (difference <= 0) {
+          clearInterval(x);
+          document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+      }, 1000);
+
+      //   const a = new Date();
+      //   let h = timee(a.getHours());
+      //   let m = timee(a.getMinutes());
+      //   let s = timee(a.getSeconds());
+      //   let con = h + ":" + m + ":" + s;
+      //   document.getElementById("do").innerHTML = con;
+      //   function timee(x) {
+      //     if (x < 10) {
+      //       x = "0" + 1;
+      //     }
+      //     return x;
+      //   }
+      //   let date = new Date();
+      //   let sec = date.getSeconds();
+      //   setTimeout(() => {
+      //     setInterval(() => {
+      //       // do something
+      //     }, 60 * 1000);
+      //   }, (60 - sec) * 1000);
+      //   document.getElementById("doo").innerHTML = sec;
+
+    //   var minutesLabel = document.getElementById("minutes");
+    //   var secondsLabel = document.getElementById("seconds");
+    //   var totalSeconds = 0;
+    //   setInterval(setTime, 1000);
+
+    //   function setTime() {
+    //     ++totalSeconds;
+    //     secondsLabel.innerHTML = pad(totalSeconds % 60);
+    //     minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+    //   }
+
+    //   function pad(val) {
+    //     var valString = val + "";
+    //     if (valString.length < 2) {
+    //       return "0" + valString;
+    //     } else {
+    //       return valString;
+    //     }
+    //   }
+    </script>
+  </body>
+</html>

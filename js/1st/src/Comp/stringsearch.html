@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="do"></p>
+    <p id="demoo"></p>
+    <script>
+      // lastIndexOf() return -1 if the text is not found
+
+      let str = "Please locate where 'locate' occurs!";
+      document.getElementById("demo").innerHTML = str.search("occurs");
+
+      let a = "  i am  a girl univerusty of  fsd  ";
+      let b = a.match(/i/g);
+      console.log(b);
+      document.getElementById("do").innerHTML = b;
+      //   text.match(/ain/gi);
+      // casesenstive   is  capital letter ma bi printing kr va saktha ha
+      let c = "gello of the world OOod";
+      let e = c.match(/o/gi);
+      console.log(e);
+      //   JavaScript String startsWith()
+      // The startsWith() method returns true if a string begins with a specified value, otherwise false:
+
+      let text = "Hello World, welcome to the universe.";
+      let d = text.startsWith("World", 6);
+      console.log(d);
+
+      //   The endsWith() method returns true if a string ends with a specified value, otherwise false:
+    //   case sensitive.
+      let textt = "John Doe";
+      document.getElementById("demoo").innerHTML = textt.endsWith("Doe");
+    </script>
+  </body>
+</html>

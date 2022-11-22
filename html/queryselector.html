@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>rrr</p>
+    <p class="ex" id="to">aaaaaaaa</p>
+    <div>
+      <p>hello</p>
+      <h2>h222</h2>
+    </div>
+    <p>h3333333</p>
+    <div>ffffffffffff</div>
+    <button onclick="myFun()">try it</button>
+    <div>
+      <a href="https://www.w3schools.com">w3schools.com</a>
+      <a href="http://www.disney.com" target="_blank">disney.com</a>
+      <a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
+    </div>
+
+    <!-- queryselector all -->
+
+    <div class="que">
+    <p class="quer">uaf</p>
+    <p class="quer">cs</p>
+    <p>it</p>
+    </div>
+     <span>
+        ooo
+     </span>
+     <span>oooooqq</span>
+     <span>hhh</span>
+ <h1>hello world</h1>
+  <h2> uaf fsd </h2>
+
+
+
+
+    <script>
+      document.querySelector("p").style.backgroundColor = "red";
+      document.querySelector("p").style.color = " green";
+      document.querySelector("p.ex").style.color = "red";
+      document.querySelector("#to").style.cSSssText =
+        "display : block; color: orange ; border: 1px solid  black;  background-color:  green";
+
+      function myFun() {
+        document.querySelector("div > h2").style.backgroundColor = "orange";
+      }
+      //   elect the first <a> element that has a "target" attribute:
+      document.querySelector("div > a[target]").style.cssText =
+        "border: 10px solid green";
+      
+//  queryselectorAll
+       const  nodeList = document.querySelectorAll(".quer");
+        for ( let i= 0 ; i < nodeList .length; i++){
+             nodeList[i].style.cssText= "border: 10px solid green;background-color: yellow "
+        }
+
+         let   node = document.querySelectorAll("span");
+          for ( let i= 0 ; i<node.length; i++){
+              node [i] .style.cssText =" background-color:yellowgreen;                                                   "
+          }
+           let   ni = document.querySelectorAll(" h1,h2");
+           for ( let i=0 ; i<  ni.length ;i++){
+             ni[i].style .cssText= " background-color:yellowgreen"
+           }
+            
+    </script>
+  </body>
+</html>

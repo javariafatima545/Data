@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="classs"></p>
+    <p id="ab"></p>
+    <p id="q"></p>
+    <p id="a"></p>
+    <p id="abc"></p>
+    <p id="ac"></p>
+    <p id="acd"></p>
+    <p id="demo"></p>
+    <p id="dm"></p>
+    <p id="aca"></p>
+    <p id="acca"></p>
+    <p id="q"></p>
+    <p id="demo2"></p>
+    <p id="demo1"></p>
+
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="p"></p>
+    <p id="demo44"></p>
+    <script>
+      // toString()
+      const ac = ["a", "b", "c", "d"];
+      //   console.log(ac.toString());
+
+      //    join()
+
+      const aa = ["a", "b", "c", "d"];
+      document.getElementById("ab").innerHTML = aa.join("*");
+
+      document.getElementsByClassName("classs")[0].innerHTML = aa.join(" * ");
+
+      //   Popping and Pushing
+      // Popping items out of an array, or pushing items into an array.
+      //   pop remove elemnt last of the array
+      const aaa = ["aa", "bb", "cc"];
+      aaa.pop();
+      console.log(aaa);
+      document.getElementById("q").innerHTML = aaa;
+
+      //  add element  last of the array
+      const b = ["aa", "bb", "cc", 11, 12, 23];
+      b.push("kivi");
+      document.getElementById("a").innerHTML = b;
+
+      //   JavaScript Array shift() element remove  from the  first
+      const ab = ["a", "b", "c", "d"];
+      ab.shift();
+      document.getElementById("abc").innerHTML = ab;
+
+      // unshift() add the  element from  first or define the length of array
+
+      const xx = ["apple", "banan", "2017-ag-8619", "uaf"];
+      xx.unshift("11");
+      document.getElementById("ac").innerHTML = xx;
+
+      const y = [11, "apple", "banan", "2017-ag-8619", "uaf"];
+      document.getElementById("aca").innerHTML = y.unshift("zz");
+      document.getElementById("acca").innerHTML = y;
+
+      console.log(y);
+
+      //   const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      //   document.getElementById("demo").innerHTML = fruits.unshift("Lemon");
+      // document.getElementById("dm").innerHTML = fruits
+
+      //   Changing Elements of the array index
+
+      const w = ["aa", "qq", "rr", "rr", 11, 12, 13];
+      w[0] = "qwerty";
+      document.getElementById("q").innerHTML = w;
+
+      //  Changing Elements .length
+      const ww = ["aa", "qq", "rr", "rr", 11, 12, 13];
+      ww[ww.length] = "Kiwi";
+      document.getElementById("demo2").innerHTML = ww;
+      console.log(ww);
+
+      //   JavaScript Array delete()
+      const xyz = ["aa", "qq", "rr", "rr2", 11, 12, 13];
+      console.log(xyz[3]);
+
+      //   concat the array   .concat()     +""+
+      const boy = ["ali", "jawad", "junaid"];
+      const girls = ["fatima", "zunria", "javaria"];
+      const abc = ["12", "122", "22"];
+
+      const ch = boy + " " + girls + " " + abc;
+
+      const chd = boy.concat(girls);
+      console.log(chd);
+      console.log(ch);
+
+      //   three array
+      const array1 = ["Cecilie", "Lone"];
+      const array2 = ["Emil", "Tobias", "Linus"];
+      const array3 = ["Robin", "Morgan"];
+      const arr4 = ["jiya", "xxx"];
+
+      const myChildren = array1.concat(array2, array3, arr4);
+
+      document.getElementById("demo1").innerHTML = myChildren;
+      console.log(array1.concat(array2, array3, arr4));
+
+      //   Merging an Array with Values)
+      const qq = ["Cecilie", "Lone"];
+      const myChildren1 = qq.concat("Peter");
+      console.log(myChildren1);
+      //    sort
+      const q = ["Cecilie", "Lone", 11, 333, 555, 12, 13, 14];
+      q.sort();
+      console.log(q);
+      //   compare  with sort in oder
+
+      let compare = (a, b) => {
+        return a - b;
+      };
+      let num = [22, 133, 55, 77, 88];
+      num.sort((a, b) => a - b);
+      console.log(num);
+
+    //   reverse  method
+    const z =["zz","ss","ff","gg","rr"]
+    z.reverse()
+    document.getElementById("p").innerHTML=z;
+
+      //   splice ()  ma 2 element data ha 1st jo ha us  index bata ha  next element  value data ha
+      //  starting  or end value data  h  or index number bata h
+      //  first element jo h vo index 2nd jo haaaa  array ma sy jitna value nikl na hoata ha vo bata ha
+      const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+      fruits1.splice(0, 2, "apple1", "banan2", "kkk");
+      document.getElementById("demo4").innerHTML = fruits1;
+      // slice remove element  from the arry
+      //  The splice( ) method changes an array, by adding or removing elements from it   array.splice(index, number of elements);
+
+      // The slice( ) method copies a given part of an array and returns that copied part as a new array. It doesn’t change the original array.
+      //   array.slice(from, until);
+
+      // From: Slice the array starting from an element index
+      // Until: Slice the array until another element index
+      const t = ["Cecilie", "Lone", 11, 333, 555, 12, 13, 14]
+    const neww = t.slice(2 ,6);
+      document.getElementById("demo44").innerHTML = neww;
+      console.log(neww)
+    </script>
+  </body>
+</html>

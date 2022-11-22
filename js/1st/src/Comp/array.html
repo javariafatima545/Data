@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="myFun()">try it</button>
+    <button onclick="myFunction()">try again</button>
+
+    <p id="12"></p>
+    <p id="do"></p>
+    <p id="doo"></p>
+    <p id="demo"></p>
+    <p id="abc"></p>
+    <p id="m"></p>
+    <p id="abcd" onclick="myBro()">33</p>
+    <p id="q"></p>
+    <p id="qq"></p>
+    <button onclick="my()">try try</button>
+    <script>
+      // get the value first index
+      const ab = ["abc", "def", "ghi"];
+
+      document.getElementById("12").innerHTML = ab[0];
+      //  change the value 1 index
+      const abc = ["abc", "def", "ghi"];
+      abc[1] = "bbccdd";
+      console.log(abc);
+      //   get array
+      const cars = new Array("Saab", "Volvo", "BMW");
+      console.log(cars);
+      // get first name
+      const person = { firstName: "jiya", lastName: "ch", age: 40 };
+      console.log(person.firstName);
+      // length
+      const fruits = ["apple", "mango", "banana1"];
+      console.log(fruits.length);
+      //  remove element from last
+      console.log(fruits[0]);
+      console.log(fruits[fruits.length - 1]);
+
+      const xyz = ["aa", "bb", "cc"];
+      console.log(xyz[xyz.length - 1]);
+
+      // adding array element
+
+      const fru = ["apple", "mango", "banana1", "mango", "banana2"];
+      console.log(fru);
+      function myFun() {
+        fru.push("lemon");
+        document.getElementById("do").innerHTML = fru;
+      }
+      // adding array element
+      const fu = ["apple", "mango", "banana1", "mango", "banana23"];
+      console.log(fu);
+
+      function myFunction() {
+        fu[fu.length] = "pineapple";
+
+        document.getElementById("doo").innerHTML = fu;
+      }
+      // adding array element
+      const fuu = ["apple", "mango", "banana1", "mango", "banana23"];
+      console.log(fuu);
+      function my() {
+        fuu[fuu.length] = "xyz";
+        document.getElementById("abc").innerHTML =
+          "univeristy of agriculture fsd";
+      }
+      // adding array element
+      const fuu1 = ["apple", "mango", "banana1", "mango", "banana23"];
+      console.log(fuu1);
+      function myBro() {
+        fuu1[fuu1.length] = "xyz";
+        document.getElementById("abcd").innerHTML = "uaf";
+      }
+      //    set the index and get length
+      const person1 = [];
+      person[0] = "John";
+      person[1] = "Doe";
+      person[2] = 46;
+      document.getElementById("demo").innerHTML =
+        person[0] + " " + person.length;
+      //    set the index
+      const abcc = [];
+      person1[0] = "1122";
+      person1[1] = "jon";
+      person1[2] = "22211";
+      document.getElementById("m").innerHTML =
+        person1[2] + "    " + person1.length;
+
+      // instanceof
+      const qwe = ["qq", 12, "33", "111"];
+      console.log(qwe instanceof Array);
+      document.getElementById("q").innerHTML = qwe instanceof Array;
+
+      // is array
+      const qw = ["qq", 12, "33", "111"];
+      document.getElementById("qq").innerHTML = Array.isArray(qw);
+
+      const v = ["fatima", "zunria", "javaria"];
+      for (i = 0; i < v.length; i++) {
+        console.log(v[i]);
+      }
+
+      let num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      console.log(num.length);
+      delete num[0];
+      console.log(num.length);
+       
+    </script>
+  </body>
+</html>

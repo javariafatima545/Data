@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p onload="imglod()" id="do"></p>
+    <img src="../imges/cat.jpg" alt=""  width="50px" height="50px">
+    <img src="../imges/cats.jpg">
+
+    <script>
+   function imglod(){
+      document.getElementById("do").innerHTML= image.src = this.src; 
+      
+   }
+   var image = document.images[0];
+var downloadingImage = new Image();
+downloadingImage.onload = function(){
+    image.src = this.src;   
+};
+downloadingImage.src = "http://an.image/to/aynchrounously/download.jpg";
+
+    </script>
+    
+</body>
+</html>

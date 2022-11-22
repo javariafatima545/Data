@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p></p>
+    <script>
+    //   program to count the number of vowels in a string
+
+    //   defining vowels
+      const vowels = ["a", "e", "i", "o", "u"]
+
+      function countVowel(str) {
+          // initialize count
+          let count = 0;
+
+    //   loop through string to test if each character is a vowel
+      for (let letter of str) {
+          if (vowels.includes(letter)) {
+              count++;
+          }
+      }
+
+    //   return number of vowels
+      return count
+      }
+
+    //   take input
+      const string = prompt('Enter a string: ');
+
+      const result = countVowel(string);
+
+      console.log(result);
+
+
+
+
+
+
+
+
+
+
+
+      let v = [ "a","e","i","o","u"];
+       function  vol(st){
+        let count = 0
+         for (let  lett of  st){
+               if (v.includes(lett)){
+                 count++
+               }
+             
+         }
+         return count
+       }
+        const   strr= prompt("entr a  number")
+         const   resultt = vol(strr)
+          console.log (resultt)
+
+
+
+
+
+
+
+           let   vell = [ "a","e","i","o","u"];
+             function  vel(st){
+                 let count = 0
+                   for (let letr of st){
+                    if (vell.includes(letr)){
+                        count++
+                    }
+                   }
+                   return count
+             }
+              const  va = prompt("enter a number");
+               const  resultttt  =  vel(va);
+                console.log(resultttt)
+
+    </script>
+  </body>
+</html>

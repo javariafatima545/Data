@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      //  some function ma hum   array ma value check krta ha  agr t value ho ge t huma true da gaa ni t false
+
+      const aa = [18, 22, 1, 23, 9, 7, 6, 7, 8];
+      let b = aa.some(myFunction);
+      function myFunction(value, index, array) {
+        return value > 15;
+      }
+      console.log(b);
+
+      // every function  ma sari values ho ge t huma true retune kra  ga
+      const a = [18, 22, 1, 23, 9, 7, 6, 7, 8];
+
+      let c = a.every(myFunction);
+      function myFunction(value, index, array) {
+        return value > 15;
+      }
+      console.log(c);
+
+      //  indexOf() function  The indexOf() method searches an array for an element value and returns its position.
+      const d = [11, 44, 55, 77, 55, 99];
+      const e = d.indexOf(55);
+      document.getElementById("demo").innerHTML =
+        "11 is found in position " + e;
+      console.log(e);
+
+      // Array lastIndexOf()
+      const q = [11, 44, 55, 77, 55, 99, 55];
+      const p = q.lastIndexOf(55);
+      console.log(p);
+      //   find()  The find() method returns the value of the
+      //  first array element that passes a test function.
+      //   y  array ki condition dakha ga or  us condation k according  us ma jo us 1 value bhari ho ge  vo return krga na ka    us condition k according sari  sari bhari value da ga
+      const i = [11, 33, 64, 66, 33, 77, 88];
+      const j = i.find(myFunction);
+      function myFunction(value, index, array) {
+        return value > 65;
+      }
+      console.log(j);
+
+      const l = [22, 4, 64, 66, 88, 77, 78];
+      const m = l.find(hello);
+      function hello(value) {
+        return value > 63;
+      }
+      console.log(m);
+      //    findIndex()   ma  jo value   array ma ni  hoti agr condation ma ho t  us k according   index number data ha
+      //  The findIndex() method returns the index of the first array element that passes a test function.
+      const n = [22, 66, 77, 88, 99];
+
+      const o = n.findIndex(kl);
+
+      function kl(value, index, array) {
+        return value > 23;
+      }
+      console.log(o);
+
+      //   array The Array.from() method returns an Array object from any object with a length property or any iterable object.
+      const myArr = Array.from("ABCDEFG");
+      console.log(myArr);
+    </script>
+  </body>
+  `
+</html>

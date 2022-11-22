@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .bck {
+      background-color: green;
+      border: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      color: white;
+    }
+    .col {
+      background-color: yellowgreen;
+      border: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      color: white;
+    }
+  </style>
+  <body>
+    <div>
+      <div>
+         selected:
+        <span id="result"></span>
+      </div>
+      <!-- <div>
+        CURRENT WINNER:
+        <span id="win"></span>
+      </div> -->
+      <button class="bck" type="button" onclick="flip('head');">Heads</button>
+      <button class="col" type="button" onclick="flip('tail');">Tails</button>
+
+      <p id="flip"></p>
+    </div>
+
+    <script>
+      function flip(guess) {
+        let x = Math.round(Math.random()) == 0 ? "head" : "tail";
+        document.getElementById("result").innerHTML = x;
+        //  document.getElementById("win").innerHTML = x ;
+        if (guess == x) {
+          document.getElementById("flip").innerHTML = "player win ";
+          console.log(`player win`);
+        } else {
+          document.getElementById("flip").innerHTML = "computer win ";
+          //   document.getElementById("flipTails").innerHTML = "computer win";
+          console.log(`computer win`);
+        }
+      }
+    </script>
+  </body>
+</html>

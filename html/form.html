@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .back {
+      background-color: yellowgreen;
+
+      width: 50%;
+      margin: auto;
+      text-align: left;
+    }
+    .top {
+      /* color: white; */
+
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+    }
+    .top input {
+      border: none;
+      outline: none;
+      width: 80%;
+    }
+    select {
+      width: 81%;
+      outline: none;
+      border: none;
+    }
+    .topp{
+        margin-left: 10px;
+    }
+    
+  </style>
+  <body>
+    <div class="back">
+      <div class="top">
+        <label for="first name">First name :</label>
+        <input type="text" autocomplete="off" required maxlength="5" size="5"  id="dis1"/>
+      </div>
+
+      <div class="top">
+        <label for="last name">Last Name :</label>
+        <input type="text" lenght="5"autocomplete="off"  required maxlength="5" size="5" id="dis2" />
+      </div>
+      <div class="top">
+        <label for="Email">Email :</label> <input type="email"autocomplete="off"  required   id="dis3"/>
+      </div>
+      <div class="top">
+        <label for="password">password :</label>
+        <input type="password" id="pass"  required autocomplete="off"   />
+        <p id="mesg">password is <span id="strr"></span></p>
+      </div>
+      <div class="top">
+        <label for="password"> Re-Enter password :</label>
+        <input type="password" required   id="dis5" autocomplete="off" />
+        <p id="mesg">password is <span id="strr"></span></p>
+        
+      </div>
+      <div class="top">
+        <label for="age">age :</label>
+        <input type="number" maxlength="2" size="2" required  id="dis6" autocomplete="off" />
+      </div>
+      <div class="top"  >
+        <label for="select country">select country </label>
+        <select selected id="dis7">
+          country :
+          <option selected>country</option>
+          <option value="pakistan" id="2">pakistan</option>
+          <option value="uk" id="3">uk</option>
+          <option value="usa" id="2">usa</option>
+          <option value="uk" id="3">uae</option>
+          <option value="canada" id="2">canada</option>
+          <option value="Euorpe" id="3">Euorpe</option>
+        </select>
+      </div>
+
+      <div class="top" >
+        <label for="select country">select country code </label>
+        <select selected  id="dis8">
+          country :
+          <option selected>country code</option>
+          <option value="+91" id="2">+92</option>
+          <option value="+44" id="3">+44</option>
+          <option value="+1" id="2">+1</option>
+          <option value="+971" id="3">+971</option>
+          <option value="+1" id="2">+1</option>
+          <option value="+32" id="3">+32</option>
+        </select>
+      </div>
+      <div class=""></div>
+
+      <div class="top"  >
+        <label for="postel Code">postel Code :</label>
+        <select name="cars" id="code">
+          <option selected>postel code</option>
+          <option value="	24550" id="2">24550</option>
+          <option value="	24551" id="3">24551</option>
+          <option value="	24552" id="4">24552</option>
+          <option value="	24553" id="5">24554.</option>
+          <option value="	24550" id="2">24550</option>
+          <option value="	24551" id="3">24551</option>
+          <option value="	24552" id="4">24552</option>
+          <option value="	24553" id="5">24554.</option>
+        </select>
+      </div>
+
+      
+        <div >
+          <label for="url links" >url:</label>
+          <input type="url"  id="dis10"required autocomplete="off"  />
+        </div>
+      
+        <div  class="topp"><input type="submit" value="Submit" onclick="showInput()" name="fname" /></div>
+        <div class="topp">
+            <label>Your input: </label>
+            <p><div id='name'></div></p>
+            <div id="last"></div>
+            <div id="email"></div>
+            <div id ="pass1"></div>
+            <div id="re-enter"></div>
+            <div id="age"></div>
+            <div id="country"></div>
+            <div id ="codee"></div>
+            <div id="post"></div>
+            <div id ="url"></div>
+        </div>
+     
+   
+    </div>
+    <script>
+      let pass = document.getElementById("pass");
+      let mesg = document.getElementById("mesg");
+      let strr = document.getElementById("strr");
+      pass.addEventListener("input", () => {
+        if (pass.value.length > 0) {
+          mesg.style.display = "block";
+        } else {
+          mesg.style.display = "none";
+        }
+        if (pass.value.length < 4) {
+          strr.innerHTML = "weak";
+          mesg.style.color = "red";
+        } else if (pass.value.length >= 4 && pass.value.length < 8) {
+          strr.innerHTML = "medium";
+          mesg.style.color = "blue";
+        } else if (pass.value.length <= 8) {
+          strr.innerHTML = "strong";
+          mesg.style.color = "green";
+        }
+      });
+
+
+       function showInput(){
+        document.getElementById('name').innerHTML = document.getElementById("dis1").value;
+        document.getElementById('last').innerHTML = document.getElementById("dis2").value;
+        document.getElementById('email').innerHTML = document.getElementById("dis3").value;
+        document.getElementById('pass1').innerHTML  = document.getElementById("pass").value;
+        document.getElementById('re-enter').innerHTML = document.getElementById("dis5").value;
+        document.getElementById('age').innerHTML = document.getElementById("dis6").value;
+        document.getElementById('country').innerHTML = document.getElementById("dis7").value;
+        document.getElementById('codee').innerHTML =  document.getElementById("dis8").value;
+        document.getElementById('post').innerHTML =  document.getElementById("code").value;
+        document.getElementById('url').innerHTML =  document.getElementById("dis10").value;
+
+       }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="a"></p>
+    <p class="aaa" id="dd"></p>
+    <p class="aac"></p>
+    <script>
+      const v = ["fatima", "zunria", "javaria"];
+      for (i = 0; i < v.length; i++) {
+        console.log(v[i]);
+      }
+
+      //    forof     jo ha vo  for loop  k short cut mehod ha
+      let numm = ["1", "33", "22", "33", "555"];
+      for (let i of numm) {
+        console.log(i);
+      }
+      let aa = ["11", "33",00000];
+      for (let a of aa) {
+        // document.getElementsByClassName("aaa")[0].innerHTML = aa;
+        document.getElementById("dd").innerHTML= aa;
+        console.log( aa)
+
+      }
+      //    for in  ma  array jo ha object like work krti ha us ma  array ki value  ni  index  number dati ha jo k hum key  consider krta ha
+
+// let a
+      let abc = ["511", "33", "44444", "555", "66", "00"]
+      for (let a in abc) {
+        // document.getElementsByClassName("aac")[0].innerHTML = abc;
+        console.log( a)
+      }
+
+
+
+      //    forEach() method 3 values hoti ha  array value or index
+    //   call afunction once for each array element 
+    // jb humy koi operation krna ho
+
+    
+      const num = ["11", "111", "11", "13", "33"];
+      num.forEach((element) => {
+        console.log(element * element);
+      });
+      //    array .from  jo ha vo string sy ko  array ma convert krta ha
+      let a = "harry";
+      let arr = Array.from(a);
+      console.log(arr);
+      document.getElementById("a").innerHTML = arr;
+    </script>
+  </body>
+</html>

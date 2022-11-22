@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <p></p>
+  <script>
+    //    let num =   prompt("enter a number")
+    for (i = 1; i <= 10; i++) {
+      if (i % 2 == 0) {
+        console.log(i);
+      }
+      // else {
+      //      console.log("the number is odd")
+      // }
+    }
+
+    const number = prompt("enter a number");
+    for (i = 1; i <= 10; i++) {
+      const result = i * number;
+      console.log(`${number} * ${i} = ${result}`);
+    }
+
+    // array    method wth some
+    const sum = [2, 2, 3].reduce((pSum, a) => pSum + a, 1);
+    console.log(sum);
+    const asum = [22, 3, 4];
+    // console.log(asum);
+    let element = 0;
+    for (let i = 0; i < asum.length; i++) {
+      element = element + asum[i];
+    }
+    console.log(element, "add Array");
+
+    let a = [11, 22, 33, 44, 55];
+    let b = a.reverse();
+    console.log(b);
+    let c = [11, 22, 4, 42, 10, 77, 2, 3];
+    let d = c.sort(function (a, b) {
+      return a - b;
+    });
+
+    console.log(d);
+
+    const array = [-11, 12, -2, 3, -4, -6];
+    function fill(nag) {
+      return nag < 0;
+    }
+    document.querySelector("p").innerHTML = array.filter((item) => item > 0);
+
+    let arr = "          11,33,44";
+    let are = arr.trim();
+    console.log(are);
+
+    // let arrre = [222, 3, 5, 7, 8, 8];
+    // arrre.map((item, i) => console.log(item, i, gtghb));
+
+      
+  </script>
+</html>

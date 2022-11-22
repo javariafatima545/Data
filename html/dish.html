@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <select id="dish" onclick="display()">
+      <option selected disabled hidden>Select Dish</option>
+      <option value="shami">Shami Kebab rice</option>
+
+      <option value="Aloo">Aloo wala rice</option>
+      <option value="paya">Paya</option>
+      <option value="Nihari">Nihari.</option>
+    </select>
+
+    <div id="a" style="display: none">
+      <img
+        src="./imges/shami-kabab-chilli-garlic-rice.jpg"
+        alt=""
+        width="50%"
+      />
+    </div>
+    <div id="b" style="display: none">
+        <img src="./imges/R.jpg" alt="" width="50%" />
+
+
+    </div>
+    <div id="c" style="display: none">
+      <img src="./imges/pay.jpg" alt="" width="50%" />
+    </div>
+    <div id="d" style="display: none">
+    
+      <img src="./imges/n(1).jpg" alt="" width="50%" />
+    </div>
+
+    <select name="cars" id="kg">
+      <option selected disabled hidden>Select kg</option>
+      <option value="1kg">1kg </option>
+      <option value="2kg">2kg</option>
+      <option value="3kg">3kg</option>
+      <option value="4kg">4kg.</option>
+    </select>
+    <select name="cars" id="price" onclick="hello()">
+      <option selected disabled hidden>Select price</option>
+      <option value="200" id="2" >200</option>
+      <option value="400" id="3">400</option>
+      <option value="600" id="4">600</option>
+      <option value="800" id="5">800.</option>
+    </select>
+    <select id="discount">
+      <option selected disabled hidden>Select discount</option>
+      <option value="10">10%</option>
+      <option value="15">15%</option>
+    </select>
+    <button onclick="getPrice()">Get total</button>
+    <!-- <br /><br /> -->
+    <!-- <div  id="total" ></div> -->
+  <div>total amount : <input readonly id="total" /></div> 
+    
+    <script>
+      function getPrice() {
+        let numVal1 = document.getElementById("price").value;
+        let numVal2 = document.getElementById("discount").value / 100;
+        // console.log(numVal1, numVal2);
+        // let totalValue = numVal1 - numVal1 * numVal2;
+      let totalValue =  numVal1- (numVal1 * numVal2) ;
+        document.getElementById("total").value = totalValue;
+      }
+      function display() {
+        let x = document.getElementById("dish").value;
+        if (x == "shami") {
+          document.getElementById("a").style.display = "block";
+          document.getElementById("b").style.display = "none";
+          document.getElementById("c").style.display = "none";
+          document.getElementById("d").style.display = "none";
+        } else if (x == "Aloo") {
+          document.getElementById("a").style.display = "none";
+          document.getElementById("b").style.display = "block";
+          document.getElementById("c").style.display = "none";
+          document.getElementById("d").style.display = "none";
+        } else if (x == "paya") {
+          document.getElementById("a").style.display = "none";
+          document.getElementById("b").style.display = "none";
+          document.getElementById("c").style.display = "block";
+          document.getElementById("d").style.display = "none";
+        } else if (x == "Nihari") {
+          document.getElementById("a").style.display = "none";
+          document.getElementById("b").style.display = "none";
+          document.getElementById("c").style.display = "none";
+          document.getElementById("d").style.display = "block";
+        }
+      }
+       function  hello(){
+        let y = document.getElementById("kg").value;
+        if(y == "1kg"){
+            document.getElementById("2").style.display = "block";
+            document.getElementById("3").style.display = "none"; 
+            document.getElementById("4").style.display = "none";
+            document.getElementById("5").style.display = "none";
+
+        }
+        else if(y == "2kg"){
+            document.getElementById("2").style.display = "none";
+            document.getElementById("3").style.display = "block"; 
+            document.getElementById("4").style.display = "none";
+            document.getElementById("5").style.display = "none";
+
+
+        }
+        else if(y == "3kg"){
+            document.getElementById("2").style.display = "none";
+            document.getElementById("3").style.display = "none"; 
+            document.getElementById("4").style.display = "block";
+            document.getElementById("5").style.display = "none";
+
+        }
+        else if (y == "4kg"){
+            document.getElementById("2").style.display = "none";
+            document.getElementById("3").style.display = "none"; 
+            document.getElementById("4").style.display = "none";
+            document.getElementById("5").style.display = "block";
+        }
+
+       }
+    </script>
+  </body>
+</html>

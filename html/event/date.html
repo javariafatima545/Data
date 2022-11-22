@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <p id="demo"></p>
+  <p id="do"></p>
+  <body>
+    <script>
+      const d = new Date();
+      let time = d.getTime();
+      document.getElementById("demo").innerHTML = time;
+
+     
+
+      const a = new Date();
+      let h = timee(a.getHours());
+      let m = timee(a.getMinutes());
+      let s = timee(a.getSeconds());
+      let con = h + ":" + m + ":" + s;
+      document.getElementById("do").innerHTML = con;
+      function timee(i) {
+        if (i < 10) {
+          i = "0" + 1;
+        }
+        return i
+      }
+    </script>
+  </body>
+</html>

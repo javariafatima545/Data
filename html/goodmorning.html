@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .show {
+      color: yellowgreen;
+      font-size: 20px;
+    }
+  </style>
+
+  <p id="showm" class="show"></p>
+  <p id="tshow"></p>
+
+  <body>
+    <script>
+      let date = new Date();
+      let hours = date.getHours();
+      let show;
+      if (hours < 12) {
+        show = "good morning";
+      } else if (hours >= 12 && hours <= 17) {
+        show = "good after noon";
+      } else if (hours >= 17 && hours <= 24) {
+        show = " good evening";
+      }
+
+      document.getElementById("showm").innerHTML = show;
+
+      let datee = new Date();
+      let h = zeroo(datee.getHours());
+      let m = zeroo(datee.getMinutes());
+      let s = zeroo(datee.getSeconds());
+      let time = h + ":" + m + ":" + s;
+      document.getElementById("tshow").innerHTML = time;
+      function zeroo(t) {
+        if (t <= 10) {
+          t = "0" + t;
+        }
+        return t;
+      }
+    </script>
+  </body>
+</html>

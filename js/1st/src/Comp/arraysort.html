@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="demo1" onclick="myFunction()">ff</p>
+    <p id="demo2"></p>
+    <p id="demo5"></p>
+
+    <script>
+      // sort
+      let a = ["aa", "ouu", "qwe", "ass"];
+      a.sort();
+      console.log(a);
+
+      //  sort  adescending:
+      let d = [1, 122, 22, 55];
+      let e = d.sort(sub);
+      function sub(a, b) {
+        return b - a;
+      }
+      console.log(e);
+
+      let f = [111, 2, 4, 55, 66, 77];
+      let g = f.sort(subb);
+      function subb(a, b) {
+        return a - b;
+      }
+      console.log(g);
+
+      //  reverse
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      fruits.reverse();
+      console.log(fruits);
+      //  reduce right
+      const b = [2, 45, 30, 100];
+      const c = b.reduceRight(getsum);
+      function getsum(aa, bb) {
+        return aa - bb;
+      }
+      console.log(c);
+      // sort  numerically
+      const pointss = [40, 100, 1, 5, 25, 10];
+      const po = pointss.sort(myFunction1);
+      function myFunction1(a, b) {
+        return a - b;
+      }
+      console.log(pointss);
+      // sort  Alphabetically
+      const points = [40, 100, 1, 5, 25, 10];
+      let gg = points.sort();
+      console.log(gg);
+      //    Sorting an Array in Random Order
+      const point = [40, 100, 1, 5, 25, 10];
+      function myFunction() {
+        point.sort(function () {
+          return 0.5 - Math.random();
+        });
+        document.getElementById("demo1").innerHTML = point;
+      }
+      document.getElementById("demo1").innerHTML = point;
+      console.log(point);
+
+      // now points[0] contains the lowest value
+      // and points[points.length-1] contains the highest value
+      //   low value find
+      const poin = [140, 1060, 11, 53, 25, 310];
+      const qq = poin.sort(hello);
+      function hello(a, b) {
+        return a - b;
+      }
+      document.getElementById("demo2").innerHTML = qq[0];
+      // height value find
+      const j = [11, 13, 14, 15, 16, 66];
+      const k = j.sort(hy);
+      function hy(a, b) {
+        return b - a;
+      }
+      console.log(k[0]);
+      
+
+
+      
+    </script>
+  </body>
+</html>

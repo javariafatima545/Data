@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="dm" class="text"></p>
+    <p id="dmo" class="text"></p>
+    <p id="do " class="text"></p>
+    <p id="dm" class="text"></p>
+    <script>
+      function hello(x, y) {
+        document.getElementById("dm").innerHTML = x * y;
+        return x * y;
+      }
+      hello(100, 122);
+
+      let arr = [
+        { a: 10, b: 20 },
+        { a: 20, b: 78 },
+        { a: 12, b: 6 },
+      ];
+
+      function firstName(a, b) {
+        return 1 + (a + b) / 2;
+      }
+      let tags = document.getElementsByClassName("text");
+      for (let i = 0; i < 3; i++) {
+        tags[i].innerHTML = firstName(arr[i].a, arr[i].a);
+      }
+    </script>
+  </body>
+</html>
